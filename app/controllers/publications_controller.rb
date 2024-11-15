@@ -1,9 +1,19 @@
 class PublicationsController < ApplicationController
-  before_action :set_publication, only: %i[ show edit update destroy ]
+  before_action :set_publication, only: %i[show edit update destroy]
 
   # GET /publications or /publications.json
   def index
-    @publications = Publication.all
+    @publications = Publication.where(status: true)
+
+    # Filtrar por fecha
+    if params[:start_date].present? && params[:end_date].present?
+      @publications = @publications.from_date_range(params[:start_date], params[:end_date])
+    end
+
+    # Filtrar por categoría
+    if params[:category].present?
+      @publications = @publications.by_category(params[:category])
+    end
   end
 
   # GET /publications/1 or /publications/1.json
@@ -65,6 +75,6 @@ class PublicationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def publication_params
-      params.require(:publication).permit(:title, :description, :status)
+      params.require(:publication).permit(:title, :description, :category, :status)
     end
 end

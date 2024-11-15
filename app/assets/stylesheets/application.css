@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+@import './publications.css';
+@import './new_publication.css';
