@@ -77,6 +77,15 @@ bundle exec rspec
 
 ## 📷 Vista previa
 
+![image](https://github.com/user-attachments/assets/bf8933fc-a62f-420a-a82c-8326732bdf3e)
+![image](https://github.com/user-attachments/assets/12a42c0e-a01f-4c45-b875-e9ac7e5ee3a8)
+![image](https://github.com/user-attachments/assets/341d29da-36bd-4c66-8d4f-dc822a9dbcfc)
+![image](https://github.com/user-attachments/assets/b29e492a-ba7c-4f8d-a826-423c068f0852)
+
+
+
+
+
 
 
 
