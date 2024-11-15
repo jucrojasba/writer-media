@@ -1,6 +1,104 @@
 {
   "RSpec": {
     "coverage": {
+      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/helpers/publications_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/comment.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          3,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null
+        ]
+      },
+      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/publication.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          19,
+          null,
+          null,
+          1,
+          14,
+          null,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
       "C:/Users/mlbar/Downloads/writer-media/writer-media/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
@@ -165,20 +263,6 @@
         ],
         "branches": {}
       },
-      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/helpers/application_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {}
-      },
-      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/helpers/publications_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {}
-      },
       "C:/Users/mlbar/Downloads/writer-media/writer-media/app/jobs/application_job.rb": {
         "lines": [
           0,
@@ -199,98 +283,8 @@
           0
         ],
         "branches": {}
-      },
-      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/application_record.rb": {
-        "lines": [
-          0,
-          0,
-          0
-        ],
-        "branches": {}
-      },
-      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/comment.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {}
-      },
-      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/publication.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0
-        ],
-        "branches": {}
-      },
-      "C:/Users/mlbar/Downloads/writer-media/writer-media/app/models/user.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {}
       }
     },
-    "timestamp": 1731687657
+    "timestamp": 1731687855
   }
 }
