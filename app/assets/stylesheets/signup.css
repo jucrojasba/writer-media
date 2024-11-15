@@ -1,0 +1,107 @@
+/* Estilo para el título de la página de registro */
+.signup-title {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  /* Estilo general del formulario */
+  .signup-form {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilo para los campos de entrada */
+  .signup-field {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para las etiquetas de los campos */
+  .signup-label {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Estilo para los campos de entrada */
+  .signup-input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+  }
+  
+  /* Efecto de foco en los campos de entrada */
+  .signup-input:focus {
+    border-color: #5cb85c;
+    background-color: #f1fdf1;
+    outline: none;
+  }
+  
+  /* Estilo para el mensaje de error */
+  .signup-error-messages {
+    color: #d9534f;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para el mensaje de la contraseña mínima */
+  .signup-password-minimum {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  /* Estilo para el botón de envío */
+  .signup-actions {
+    text-align: center;
+  }
+  
+  .signup-submit-btn {
+    background-color: #5cb85c;
+    color: white;
+    padding: 14px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Efecto de hover en el botón */
+  .signup-submit-btn:hover {
+    background-color: #4cae4c;
+    transform: translateY(-2px);
+  }
+  
+  /* Estilo para los enlaces de la parte inferior */
+  .signup-links a {
+    text-decoration: none;
+    color: #5cb85c;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-links a:hover {
+    color: #4cae4c;
+    text-decoration: underline;
+  }
+  

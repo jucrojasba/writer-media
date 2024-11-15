@@ -1,4 +1,6 @@
 class Publication < ApplicationRecord
+  belongs_to :user
+
   # Validaciones
   validates :title, presence: true, length: { in: 3..100 }
   validates :description, presence: true, length: { maximum: 500 }
