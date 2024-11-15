@@ -1,0 +1,32 @@
+<h2>Comments for the publication: <%= @publication.title %></h2>
+
+<% if @publication.comments.empty? %>
+  <p>No comments yet.</p>
+<% else %>
+  <% @publication.comments.each do |comment| %>
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-user"><%= comment.user.email %></span>
+        <span class="comment-date">Posted <%= time_ago_in_words(comment.created_at) %> ago</span>
+      </div>
+      <p class="comment-text"><%= comment.content %></p>
+      <div class="comment-footer">
+        <% if current_user.admin? %>
+          <%= link_to 'Delete', publication_comment_path(@publication, comment), data: { turbo_method: :delete }, class: 'delete-btn' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<%= form_with(model: [@publication, @publication.comments.build], local: true) do |form| %>
+  <div class="form-group">
+    <%= form.label :content, 'Add a comment' %>
+    <%= form.text_area :content, class: 'form-control comment-area', rows: 4, placeholder: 'Write your comment here...' %>
+  </div>
+
+  <div class="buttons-container">
+    <%= form.submit 'Post comment', class: 'btn-post' %>
+    <%= link_to 'Back', publication_path(@publication), class: 'btn-back' %>
+  </div>
+<% end %>

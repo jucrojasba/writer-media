@@ -41,6 +41,9 @@
         <p>
           <%= link_to "Show this publication", publication, class: "btn btn-secondary" %>
         </p>
+        <p>
+          <%= link_to 'Comment', publication_comments_path(publication), class: 'btn btn-secondary' %>
+        </p>
       </div>
     <% end %>
   <% else %>

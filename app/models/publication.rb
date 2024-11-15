@@ -30,4 +30,7 @@ class Publication < ApplicationRecord
   def log_publication_creation
     Rails.logger.info "Publication '#{title}' created successfully at #{created_at}."
   end
+
+  # Relaciones
+  has_many :comments, dependent: :destroy
 end

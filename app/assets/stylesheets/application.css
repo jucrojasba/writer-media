@@ -16,6 +16,7 @@
 @import './publications.css';
 @import './new_publication.css';
 @import './login.css';
+@import './comments.css';
 
  /* Navbar container */
  .navbar {

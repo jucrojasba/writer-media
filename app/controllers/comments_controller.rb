@@ -2,7 +2,11 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_publication
   before_action :set_comment, only: [ :destroy ]
-  before_action :check_admin, only: [ :destroy ]
+
+  # GET /publications/:publication_id/comments
+  def index
+    @comments = @publication.comments
+  end
 
   # POST /publications/:publication_id/comments
   def create
@@ -10,9 +14,9 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to @publication, notice: "Comentario agregado exitosamente."
+      redirect_to publication_comments_path(@publication), notice: "Comentario agregado exitosamente."
     else
-      redirect_to @publication, alert: "No se pudo agregar el comentario."
+      redirect_to publication_comments_path(@publication), alert: "No se pudo agregar el comentario."
     end
   end
 
@@ -34,12 +38,5 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:content)
-  end
-
-  # Verificar si el usuario es admin
-  def check_admin
-    unless current_user.admin?
-      redirect_to @publication, alert: "No tienes permisos para eliminar este comentario."
-    end
   end
 end
