@@ -29,6 +29,7 @@
       <div class="publication-item">
         <h2><%= publication.title %></h2>
         <p><%= publication.description %></p>
+        <p>Category: <%= publication.category %></p>
         <p><strong>Created at:</strong> <%= publication.created_at.strftime("%B %d, %Y %H:%M") %></p>
         <p><strong>Author:</strong> <%= publication.user.email %></p>
         <% if publication.status %>
