@@ -4,7 +4,7 @@ class PublicationsController < ApplicationController
 
   # GET /publications or /publications.json
   def index
-    if current_user.admin?
+    if current_user && current_user.admin?  # Asegurarse de que current_user no es nil
       @publications = Publication.all
     else
       @publications = Publication.where(status: true)
@@ -27,7 +27,7 @@ class PublicationsController < ApplicationController
 
   # GET /publications/new
   def new
-    @publication = currente_user.publication.new
+    @publication = current_user.publications.new  # Corregido 'currente_user' por 'current_user'
   end
 
   # GET /publications/1/edit
@@ -36,7 +36,7 @@ class PublicationsController < ApplicationController
 
   # POST /publications or /publications.json
   def create
-    @publication = currente_user.publication.new(publication_params)
+    @publication = current_user.publications.new(publication_params)
 
     respond_to do |format|
       if @publication.save
