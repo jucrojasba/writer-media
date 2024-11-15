@@ -25,9 +25,15 @@
     <%= form.select :category, options_for_select(["Romantico", "Accion", "Terror", "Comedia"], @publication.category), { class: 'input-select', prompt: "Seleccione una categoría" } %>
   </div>
 
-  <%= form.hidden_field :status, value: true %>
-  <br>
-  <br>
+  <% if current_user.admin? %>
+    <div class="form-field">
+      <%= form.label :status, 'Bajar post', class: 'label' %>
+      <%= form.check_box :status, checked: @publication.status == false, class: 'input-checkbox' %>
+      <p>Marque para bajar el post (Cambiar a Inactivo).</p>
+    </div>
+  <% else %>
+    <%= form.hidden_field :status, value: true %>
+  <% end %>
 
   <div class="form-submit">
     <%= form.submit 'Guardar', class: 'submit-button' %>

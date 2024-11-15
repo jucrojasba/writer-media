@@ -4,7 +4,11 @@ class PublicationsController < ApplicationController
 
   # GET /publications or /publications.json
   def index
-    @publications = Publication.where(status: true)
+    if current_user.admin?
+      @publications = Publication.all
+    else
+      @publications = Publication.where(status: true)
+    end
 
     # Filtrar por fecha
     if params[:start_date].present? && params[:end_date].present?
