@@ -21,20 +21,25 @@
   </div>
 
   <div class="form-field">
-    <%= form.label :category, class: 'label' %>
-    <%= form.select :category, options_for_select(["Romantico", "Accion", "Terror", "Comedia"], @publication.category), { class: 'input-select', prompt: "Seleccione una categoría" } %>
-  </div>
+  <%= form.label :category, class: 'label' %>
+  <%= form.select :category, options_for_select(["Romantico", "Accion", "Terror", "Comedia"], @publication.category), { class: 'input-select', prompt: "Seleccione una categoría" } %>
+</div>
+
+
+  <br>
 
   <% if current_user.admin? %>
     <div class="form-field">
-      <%= form.label :status, 'Bajar post', class: 'label' %>
-      <%= form.check_box :status, checked: @publication.status == false, class: 'input-checkbox' %>
-      <p>Marque para bajar el post (Cambiar a Inactivo).</p>
+      <%= form.label :status, 'Estado del post', class: 'label' %>
+      <%= form.select :status, options_for_select([["Activo", true], ["Inactivo", false]], @publication.status), { class: 'input-select' } %>
+      <p>Seleccione el estado del post.</p>
     </div>
   <% else %>
     <%= form.hidden_field :status, value: true %>
   <% end %>
 
+  <br>
+  
   <div class="form-submit">
     <%= form.submit 'Guardar', class: 'submit-button' %>
   </div>

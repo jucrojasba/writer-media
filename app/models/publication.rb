@@ -13,8 +13,11 @@ class Publication < ApplicationRecord
 
   # Scopes
   scope :from_date_range, ->(start_date, end_date) {
-    where(created_at: start_date.beginning_of_day..end_date.end_of_day)
-  }
+  start_date = Date.parse(start_date) if start_date.is_a?(String)
+  end_date = Date.parse(end_date) if end_date.is_a?(String)
+  where(created_at: start_date.beginning_of_day..end_date.end_of_day)
+}
+
   scope :by_category, ->(category) { where(category: category) }
 
   # Métodos privados

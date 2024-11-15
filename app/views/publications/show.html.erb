@@ -2,9 +2,9 @@
 
 <%= render @publication %>
 
-<div>
-  <%= link_to "Edit this publication", edit_publication_path(@publication) %> |
-  <%= link_to "Back to publications", publications_path %>
+<div class="publication-actions">
+  <%= link_to "Edit this publication", edit_publication_path(@publication), class: "btn btn-edit" %> |
+  <%= link_to "Back to publications", publications_path, class: "btn btn-back" %>
 
-  <%= button_to "Destroy this publication", @publication, method: :delete %>
+  <%= button_to "Destroy this publication", @publication, method: :delete, class: "btn btn-delete" %>
 </div>

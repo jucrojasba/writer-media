@@ -6,7 +6,7 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this publication", @publication %> |
-  <%= link_to "Back to publications", publications_path %>
+<div class="publication-actions">
+  <%= link_to "Show this publication", @publication, class: "btn btn-edit"%> |
+  <%= link_to "Back to publications", publications_path, class: "btn btn-back"%>
 </div>

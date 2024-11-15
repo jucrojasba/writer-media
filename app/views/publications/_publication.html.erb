@@ -1,17 +1,28 @@
-<div id="<%= dom_id publication %>">
-  <p>
+<div id="<%= dom_id(publication) %>" class="publication-container">
+  <p class="publication-title">
     <strong>Title:</strong>
     <%= publication.title %>
   </p>
 
-  <p>
+  <p class="publication-description">
     <strong>Description:</strong>
     <%= publication.description %>
   </p>
 
-  <p>
+  <p class="publication-status">
     <strong>Status:</strong>
-    <%= publication.status %>
+    <span class="<%= publication.status ? 'active' : 'inactive' %>">
+      <%= publication.status ? 'Active' : 'Inactive' %>
+    </span>
   </p>
 
+  <p class="publication-description">
+    <strong>Created at:</strong>
+    <%= publication.created_at.strftime('%B %d, %Y') %>
+  </p>
+
+  <p class="publication-description">
+    <strong>Author:</strong>
+    <%= publication.user.email %>
+  </p>
 </div>
