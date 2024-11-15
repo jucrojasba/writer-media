@@ -37,7 +37,7 @@ Writter Media es una red social diseñada especialmente para escritores, donde p
 ### 1️⃣ Clonar el repositorio
 ```
 bash
-git clone <[URL_DEL_REPOSITORIO](https://github.com/jucrojasba/writer-media)>
+git clone https://github.com/jucrojasba/writer-media.git
 cd writter-media
 ```
 
